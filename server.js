@@ -17,9 +17,7 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRoutes);
 
-app.get("/", (req, res) => {
-  res.send("API is running...");
-});
+
 app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>  console.log(`Server running at http://localhost:${PORT}`));
+app.listen(PORT, () =>  console.log(`Servers running at http://localhost:${PORT}`));
