@@ -20,8 +20,12 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@3.110.194.124 << 'EOF'
-            cd /home/ubuntu/backend-rest-api-ec2-git-runner
+          ssh -o StrictHostKeyChecking=no ubuntu@13.232.41.47 << 'EOF'
+            cd /home/ubuntu
+            if [ ! -d "backend-rest-api-ec2-git-runner" ]; then
+              git clone https://github.com/Faaiz-uddin/backend-rest-api-ec2-git-runner.git
+            fi
+            cd backend-rest-api-ec2-git-runner
             git pull origin master
             npm install
             pm2 restart backend || pm2 start server.js --name backend
