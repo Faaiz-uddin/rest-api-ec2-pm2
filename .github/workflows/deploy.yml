@@ -20,7 +20,7 @@ jobs:
 
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@13.232.41.47 << 'EOF'
+          ssh -o StrictHostKeyChecking=no ubuntu@13.204.199.139 << 'EOF'
             cd /home/ubuntu
             if [ ! -d "backend-rest-api-ec2-git-runner" ]; then
               git clone https://github.com/Faaiz-uddin/backend-rest-api-ec2-git-runner.git
