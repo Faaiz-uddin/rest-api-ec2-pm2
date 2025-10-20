@@ -94,25 +94,31 @@ Example Endpoint:
 http://13.204.199.139/api/auth/register
 ```
 
+✅ Working response (Postman / Browser):
+
+**Register API**
+![Register API](assets/06_api_response_register.png)
+
+**Login API**
+![Login API](assets/07_api_response_login.png)
+
+**Profile API**
+![Profile API](assets/08_api_response_profile.png)
+
+---
+
+
+
 ### 🍃 7️⃣ MongoDB Atlas (Live Database Connection)
 
 This REST API is connected to a **live MongoDB Atlas cluster**,  
 which stores all user authentication and profile data securely in the cloud.
 
-Example environment variable (saved in `.env` on EC2):
-```env
-MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/your-db-name
-(assets/10_db.png)
-
-
-✅ Working response (Postman / Browser):
-
-![API Working]
-(assets/06_api_response_register.png)
-(assets/07_api_response_login.png)
-(assets/08_api_response_profile.png)
+**MongoDB Database**
+![MongoDB Database](assets/10_db.png)
 
 ---
+
 
 ## 📁 EC2 Folder Structure
 
